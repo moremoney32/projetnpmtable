@@ -42,7 +42,7 @@ td {
 }
 
 th {
-     background: darkgray;
+     background: blue;
      color: white;
      height: 70px;
      font-size: 15px;
@@ -105,4 +105,71 @@ tr {
 }
 .parentButtonSend {
      transform: translate3d(50px, 20px, 0);
+}
+
+/***responsive components table mobile*****/
+@media all and (min-width: 0px) and (max-width: 767px) {
+     .currentemployes {
+          width: auto;
+          margin: auto;
+          padding-top: 50px;
+          display: flex;
+          gap: 30px;
+     }
+     .titleEmployes {
+          position: absolute;
+          top: -15px;
+          left: 70px;
+     }
+     .selectSearch {
+          position: absolute;
+          display: flex;
+          gap: 70px !important;
+          padding-top: 50px;
+     }
+     input {
+          width: 100px;
+     }
+     td {
+          height: 70px;
+     }
+     table,
+     thead,
+     tbody,
+     tr,
+     th,
+     td {
+          display: block;
+     }
+     table {
+          display: flex;
+          margin-top: 100px;
+     }
+     .entriesPrevious {
+          display: flex;
+          position: absolute;
+          bottom: 0px;
+     }
+     .home {
+          position: absolute;
+          bottom: 0px;
+     }
+     /* td {
+          position: relative;
+          padding-left: 80px;
+          padding-top: 70px;
+     } */
+     /* td::before {
+          content: attr(data-label);
+          position: absolute;
+          background: violet;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          width: 70px;
+          font-size: 20px;
+          color: red;
+     } */
 }

@@ -174,18 +174,36 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
                <table>
                     <thead>
                          <tr className="trEmployes">
-                              <th className="firstName">firstName</th>
-                              <th className="lastName">lastName</th>
-                              <th className="startDate">startDate</th>
-                              <th className="department">department</th>
-                              <th className="dateOfBirth">dateOfBirth </th>
-                              <th className="street">street</th>
-                              <th className="city">city</th>
-                              <th className="select">state</th>
-                              <th className="zipCode">zipCode</th>
+                              <th className="firstName" role="columnheader">
+                                   firstName
+                              </th>
+                              <th className="lastName" role="columnheader">
+                                   lastName
+                              </th>
+                              <th className="startDate" role="columnheader">
+                                   startDate
+                              </th>
+                              <th className="department" role="columnheader">
+                                   department
+                              </th>
+                              <th className="dateOfBirth" role="columnheader">
+                                   dateOfBirth{" "}
+                              </th>
+                              <th className="street" role="columnheader">
+                                   street
+                              </th>
+                              <th className="city" role="columnheader">
+                                   city
+                              </th>
+                              <th className="select" role="columnheader">
+                                   state
+                              </th>
+                              <th className="zipCode" role="columnheader">
+                                   zipCode
+                              </th>
                          </tr>
                     </thead>
-                    <tbody>
+                    <tbody aria-hidden="true">
                          {currentData.map((card, index) => {
                               return (
                                    <tr key={index}>
