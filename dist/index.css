@@ -1,4 +1,4 @@
-.currentemployes {
+._5kjus {
      width: 1000px;
      margin: auto;
      padding-top: 50px;
@@ -6,18 +6,18 @@
      flex-direction: column;
      gap: 30px;
 }
-.titleEmployes {
+._3SkCW {
      text-align: center;
 }
-.selectSearch {
+._2IMGo {
      display: flex;
      justify-content: space-between;
 }
-.parentSelect {
+._h-yQn {
      display: flex;
      gap: 3px;
 }
-.parentSearch {
+._2mgYy {
      display: flex;
      gap: 3px;
 }
@@ -59,69 +59,69 @@ tr {
      justify-content: space-between;
 }
 
-.entriesPrevious {
+._3Sqri {
      display: flex;
      justify-content: space-between;
 }
-.entries {
+._3BQid {
      display: flex;
      gap: 5px;
 }
-.previous {
+._O_Cf7 {
      display: flex;
      gap: 8px;
      align-items: center;
 }
-.childprevious {
+._60xRt {
      padding: 10px;
      background: darkgray;
      text-align: center;
      cursor: pointer;
 }
-.next {
+._pRN41 {
      cursor: pointer;
 }
-.home {
+._3FSOK {
      margin: auto;
 }
-.tdEmployes {
+._1cKNS {
      display: flex;
      flex-direction: column;
 }
-.parentc {
+.__gJkg {
      display: flex;
      justify-content: space-between;
      background: darkgray;
 }
-.error {
+._2vdTt {
      position: absolute;
      left: 35%;
      top: 40%;
      color: red;
      font-size: 40px;
 }
-.errorsEmployes {
+._1ZEf9 {
      color: red;
 }
-.parentButtonSend {
+._oIkOa {
      transform: translate3d(50px, 20px, 0);
 }
 
 /***responsive components table mobile*****/
 @media all and (min-width: 0px) and (max-width: 767px) {
-     .currentemployes {
+     ._5kjus {
           width: auto;
           margin: auto;
           padding-top: 50px;
           display: flex;
           gap: 30px;
      }
-     .titleEmployes {
+     ._3SkCW {
           position: absolute;
           top: -15px;
           left: 70px;
      }
-     .selectSearch {
+     ._2IMGo {
           position: absolute;
           display: flex;
           gap: 70px !important;
@@ -145,12 +145,12 @@ tr {
           display: flex;
           margin-top: 100px;
      }
-     .entriesPrevious {
+     ._3Sqri {
           display: flex;
           position: absolute;
           bottom: 0px;
      }
-     .home {
+     ._3FSOK {
           position: absolute;
           bottom: 0px;
      }

@@ -10,7 +10,7 @@ export const Pagination = ({ totalPosts, setCurrentPages }) => {
                {pages.map((page, index) => {
                     return (
                          <span
-                              className="childprevious"
+                              // className="childprevious"
                               key={index}
                               onClick={() => setCurrentPages(page)}
                          >

@@ -12,6 +12,7 @@ import { getZipCode } from "./utils/getInfo.js";
 import { getDate } from "./utils/getInfo.js";
 import { searchElement } from "./utils/searchElement.js";
 import { Pagination } from "./Pagination";
+import { NavLink } from "react-router-dom";
 
 export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
      const [posts, setStartDate] = useState(arrayEmployes);
@@ -22,6 +23,7 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
      const firstPages = lastPages - postInfos;
      const currentData = posts.slice(firstPages, lastPages);
      const arrayOption = [3, 5, 10, 15, 25];
+
      async function changes() {
           let trEmployes = document.querySelector(".trEmployes");
           let clicked = false;
@@ -144,14 +146,104 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
           console.log(event.target.value);
           setPostInfos(event.target.value);
      };
+     const currentemployes = {
+          width: "1000px",
+          margin: "auto",
+          paddingTop: "50px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "30px",
+     };
+     const titleEmployes = {
+          textAlign: "center",
+     };
+     const divStyle = {
+          display: "flex",
+          justifyContent: "space-between",
+     };
+     const parentSelect = {
+          display: "flex",
+          gap: "3px",
+     };
+     const parentSearch = {
+          display: "flex",
+          gap: "3px",
+     };
+     const entriesPrevious = {
+          display: "flex",
+          justifyContent: "space-between",
+     };
+     const entries = {
+          display: "flex",
+          gap: "5px",
+     };
+     const previous = {
+          display: "flex",
+          gap: "8px",
+          alignItems: "center",
+     };
+     const nextt = {
+          cursor: "pointer",
+     };
+     const home = {
+          margin: "auto",
+     };
+     const childprevious = {
+          padding: "10px",
+          background: "darkgray",
+          textAlign: "center",
+          cursor: "pointer",
+     };
+     const errorrs = {
+          display: "block",
+          position: "absolute",
+          left: "35%",
+          top: "40%",
+          color: "red",
+          fontSize: "40px",
+     };
+     const table = {
+          padding: "5px",
+          border: "2px solid #79526f",
+          lineHeight: "35px",
+          borderCollapse: "collapse",
+          width: "100%",
+     };
+     const td = {
+          background: "blanchedalmond",
+          borderCollapse: "collapse",
+          border: "2px solid skyblue",
+          color: "black",
+          height: "100px",
+          fontSize: "15px",
+          padding: "3px",
+          width: "100px",
+     };
+     const th = {
+          background: "blue",
+          color: "white",
+          height: "70px",
+          fontSize: "15px",
+          padding: "5px",
+          cursor: "pointer",
+          width: "100px",
+          borderRight: "1px solid white",
+     };
+     const tr = {
+          textAlign: "center",
+          display: "flex",
+          width: "100% !important",
+
+          justifyContent: "space-between",
+     };
 
      return (
-          <div className="currentemployes">
-               <div className="titleEmployes">
+          <div className="currentemployes" style={currentemployes}>
+               <div className="titleEmployes" style={titleEmployes}>
                     <h1>Current Employees</h1>
                </div>
-               <div className="selectSearch">
-                    <div className="parentSelect">
+               <div style={divStyle}>
+                    <div className="parentSelect" style={parentSelect}>
                          <span>show</span>
                          <select onChange={handleChange}>
                               {arrayOption.map((option, index) => {
@@ -165,40 +257,76 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
 
                          <span>entries</span>
                     </div>
-                    <div className="parentSearch">
+                    <div className="parentSearch" style={parentSearch}>
                          <span>search:</span>
                          <input type="text" className="input" />
                     </div>
                </div>
 
-               <table>
+               <table style={table}>
                     <thead>
-                         <tr className="trEmployes">
-                              <th className="firstName" role="columnheader">
+                         <tr className="trEmployes" style={tr}>
+                              <th
+                                   className="firstName"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    firstName
                               </th>
-                              <th className="lastName" role="columnheader">
+                              <th
+                                   className="lastName"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    lastName
                               </th>
-                              <th className="startDate" role="columnheader">
+                              <th
+                                   className="startDate"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    startDate
                               </th>
-                              <th className="department" role="columnheader">
+                              <th
+                                   className="department"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    department
                               </th>
-                              <th className="dateOfBirth" role="columnheader">
+                              <th
+                                   className="dateOfBirth"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    dateOfBirth{" "}
                               </th>
-                              <th className="street" role="columnheader">
+                              <th
+                                   className="street"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    street
                               </th>
-                              <th className="city" role="columnheader">
+                              <th
+                                   className="city"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    city
                               </th>
-                              <th className="select" role="columnheader">
+                              <th
+                                   className="select"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    state
                               </th>
-                              <th className="zipCode" role="columnheader">
+                              <th
+                                   className="zipCode"
+                                   style={th}
+                                   role="columnheader"
+                              >
                                    zipCode
                               </th>
                          </tr>
@@ -206,28 +334,32 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
                     <tbody aria-hidden="true">
                          {currentData.map((card, index) => {
                               return (
-                                   <tr key={index}>
-                                        <td data-label="firstName">
+                                   <tr key={index} className="tr" style={tr}>
+                                        <td data-label="firstName" style={td}>
                                              {card.firstName}
                                         </td>
-                                        <td data-label="lastName">
+                                        <td data-label="lastName" style={td}>
                                              {card.lastName}
                                         </td>
-                                        <td data-label="startDate">
+                                        <td data-label="startDate" style={td}>
                                              {card.startdate}
                                         </td>
-                                        <td data-label="Compta">
+                                        <td data-label="Compta" style={td}>
                                              {card.department}
                                         </td>
-                                        <td data-label="date">{card.date}</td>
-                                        <td data-label="street">
+                                        <td data-label="date" style={td}>
+                                             {card.date}
+                                        </td>
+                                        <td data-label="street" style={td}>
                                              {card.street}
                                         </td>
-                                        <td data-label="city">{card.city}</td>
-                                        <td data-label="select">
+                                        <td data-label="city" style={td}>
+                                             {card.city}
+                                        </td>
+                                        <td data-label="select" style={td}>
                                              {card.select}
                                         </td>
-                                        <td data-label="zipCode">
+                                        <td data-label="zipCode" style={td}>
                                              {card.zipCode}
                                         </td>
                                    </tr>
@@ -238,16 +370,14 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
                <span
                     className="error"
                     style={
-                         error.length === 0
-                              ? { display: "block" }
-                              : { display: "none" }
+                         error.length === 0 ? { errorrs } : { display: "none" }
                     }
                >
                     No matching records found
                </span>
 
-               <div className="entriesPrevious">
-                    <div className="entries">
+               <div style={entriesPrevious}>
+                    <div className="entries" style={entries}>
                          <span>showing</span>
                          <span>{firstPages + 1}</span>
                          <span>to</span>
@@ -260,20 +390,23 @@ export const CurrentEmployes = ({ arrayEmployes, arrayUseStore }) => {
                          <span>{posts.length}</span>
                          <span>entries</span>
                     </div>
-                    <div className="previous">
-                         <span className="next" onClick={prev}>
+                    <div className="previous" style={previous}>
+                         <span className="next" style={nextt} onClick={prev}>
                               previous
                          </span>
                          <Pagination
                               totalPosts={nbrpages}
                               setCurrentPages={setCurrentPages}
+                              style={childprevious}
                          />
-                         <span className="next" onClick={next}>
+                         <span className="next" style={nextt} onClick={next}>
                               next
                          </span>
                     </div>
                </div>
-               <div className="home">home</div>
+               <div className="home" style={home}>
+                    <NavLink to="/employes">home</NavLink>
+               </div>
           </div>
      );
 };
